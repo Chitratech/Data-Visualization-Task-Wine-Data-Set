@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+README - Alcohol Data Statistics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This code is a React application that calculates statistics for different properties of alcohol data and displays them in a table format. The sample data used in this code is for demonstration purposes and should be replaced with actual data parsing and processing logic specific to your project.
+Getting Started
 
-## Available Scripts
+To run this application, follow these steps:
 
-In the project directory, you can run:
+    Make sure you have Node.js installed on your system.
 
-### `npm start`
+    Clone this repository or copy the code into a new React project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Open a terminal and navigate to the project directory.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    Install the required dependencies by running:
 
-### `npm test`
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the development server:
 
-### `npm run build`
+sql
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    The application will be accessible at http://localhost:3000 in your web browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+How It Works
 
-### `npm run eject`
+The code contains the following components:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. calculateStatistics Function
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This function takes an array of alcohol data objects and a property name as input. It calculates the mean, median, and mode for each class of alcohol based on the provided property. The results are returned as an array of objects, where each object represents statistics for a specific class of alcohol. 2. StatTable Component
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This component receives data (array of alcohol data) and property (the property name for which statistics are calculated) as props. It utilizes the calculateStatistics function to calculate statistics whenever the data or property prop changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The StatTable component renders a table displaying the mean, median, and mode values for each class of alcohol. 3. App Component
 
-## Learn More
+The main component of the application is the App component. It imports and uses the StatTable component twice to display statistics for different properties:
+a. Flavanoids Statistics
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+It displays statistics for the "Flavanoids" property of the alcohol data.
+b. Gamma Statistics
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+It calculates a new property called "Gamma" based on the formula (Ash \* Hue) / Magnesium, and then displays statistics for this new property.
+Customization
 
-### Code Splitting
+To use this code with your own data and properties, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Replace the sampleData array with your actual data. Each object in the array should represent an instance of alcohol data, and the properties of the object should match your dataset.
 
-### Analyzing the Bundle Size
+    Modify the App component to display statistics for the properties you are interested in. You can add more instances of the StatTable component with different property props to display statistics for multiple properties.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    If you need to perform additional data processing or transformations, you can modify the calculateStatistics function or create new functions to suit your specific needs.
 
-### Making a Progressive Web App
+Important Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    Ensure that your data is in the correct format and the property names match the data you are providing to the StatTable component.
 
-### Advanced Configuration
+    The code assumes that the data prop passed to the StatTable component is an array of objects, each containing the Alcohol property to distinguish different classes of alcohol.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    The code uses React hooks (useState and useEffect) to manage the state and recompute statistics when the data or property props change.
 
-### Deployment
+License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This code is provided under the MIT License. Feel free to use, modify, and distribute it according to the terms of the license.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please ensure to make appropriate changes to the README, such as updating the project name, author, license details, and additional instructions specific to your project's setup. Also, consider providing information about the specific dataset and properties for which the statistics are being calculated.
