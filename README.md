@@ -65,3 +65,8 @@ License
 This code is provided under the MIT License. Feel free to use, modify, and distribute it according to the terms of the license.
 
 Please ensure to make appropriate changes to the README, such as updating the project name, author, license details, and additional instructions specific to your project's setup. Also, consider providing information about the specific dataset and properties for which the statistics are being calculated.
+
+Display of the Outputis as below :
+
+![image](https://github.com/Chitratech/Data-Visualization-Task-Wine-Data-Set/assets/12885538/6ae2b74d-6a9f-4a7f-b4ed-a307520098e0)
+
